@@ -32,7 +32,7 @@
 		}
 	],
 	"dependencies": {
-		"java": "git+ssh://git@github.com:curasystems/node-java.git"
+		"java": "git+ssh://git@github.com:curasystems/node-java.git#solaris"
 	},
 	"devDependencies": {
 		"mocha": "~1.18.2",
