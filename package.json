@@ -32,7 +32,7 @@
 		}
 	],
 	"dependencies": {
-		"java": "~0.3.1"
+		"java": "git+ssh://git@github.com:curasystems/node-java.git"
 	},
 	"devDependencies": {
 		"mocha": "~1.18.2",
