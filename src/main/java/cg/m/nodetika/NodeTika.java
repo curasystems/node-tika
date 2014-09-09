@@ -104,7 +104,7 @@ public class NodeTika {
 	}
 
 	public static String extractText(String filePath, String contentType) throws Exception {
-		return extractText(filePath,contentType,"UTF8");
+		return extractText(filePath, contentType, "UTF8");
 	}
 
 	public static String extractText(String filePath, String contentType, String outputEncoding) throws Exception {
@@ -113,7 +113,7 @@ public class NodeTika {
 		TikaInputStream inputStream = createInputStream(filePath);
 
 		ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-		OutputStreamWriter writer = new OutputStreamWriter(outputStream,outputEncoding);
+		OutputStreamWriter writer = new OutputStreamWriter(outputStream, outputEncoding);
 		BodyContentHandler body = new BodyContentHandler(new RichTextContentHandler(writer));
 
 		try {
@@ -128,9 +128,7 @@ public class NodeTika {
 			inputStream.close();
 		}
 
-		String text = outputStream.toString("UTF-8");
-		System.out.println(text);
-		return text;
+		return outputStream.toString("UTF-8");
 	}
 
 	public static String extractMeta(String filePath, String contentType) throws Exception {
